@@ -1,1 +1,1 @@
-# my collection of answers to codewars.com katas (problem solving)
+### my collection of answers to codewars.com katas (problem solving)
