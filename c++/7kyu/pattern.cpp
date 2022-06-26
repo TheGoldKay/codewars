@@ -1,9 +1,6 @@
 #include <string>
 #include <vector>
 
-#include <string>
-#include <vector>
-
 std::string pattern(int n){
   std::string ans;
   for(int i = 0; i < n; i++){
