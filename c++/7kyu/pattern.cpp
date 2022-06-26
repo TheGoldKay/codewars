@@ -5,22 +5,13 @@
 #include <vector>
 
 std::string pattern(int n){
-  if(n <= 0){
-    return "";
-  }
-  std::string lines;
-  int count = 1;
+  std::string ans;
   for(int i = 0; i < n; i++){
-    std::string line;
-    for(int j = 0; j < count; j++){
-      line += std::to_string(n-j);
-    }
-    lines = lines + line;
-    lines = lines + "\n";
-    count++;
+    for(int j = n; j >= n - i; j--)
+      ans += std::to_string(j);
+    ans += "\n";
   }
-  lines.erase(lines.length()-1);
-  return lines;
+  return ans.substr(0, ans.size() - 1);
 }
 
 int main(){
