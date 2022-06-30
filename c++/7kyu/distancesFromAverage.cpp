@@ -1,19 +1,19 @@
 #include <vector>
 #include <cmath>
 #include <iostream>
+#include <algorithm>
+#include <numeric>
 
-std::vector<double> distancesFromAverage(std::vector<int> input){
-  std::vector<double> dist;
-  double avg(0);
-  for(auto n: input){
-    avg += n;
-  }
-  avg = avg / input.size();
-  for(auto n: input){
-    double d = std::ceil((avg - n) * 100.0) / 100.0;
-    dist.push_back(d);
-  }
-  return dist;
+double round100(double n) {
+  return std::round(n * 100) / 100;
+}
+
+std::vector<double> distancesFromAverage(std::vector<int> input)
+{
+  double average = std::accumulate(input.begin(), input.end(), 0) / static_cast<double>(input.size());
+  std::vector<double> result(input.size(), 0);
+  std::transform(input.cbegin(), input.cend(), result.begin(), [&](auto a) { return round100(average - a); });
+  return result;
 }
 
 int main(){
