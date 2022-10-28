@@ -1,5 +1,0 @@
-def find_next_square(sq)
-  root = sq**0.5
-  (root+1)**2
-end
-
