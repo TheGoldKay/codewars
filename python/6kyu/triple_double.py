@@ -14,6 +14,7 @@ def triple_double(num1, num2):
         if n2[i] == n2[i+1] and n2[i] == num:
             d = True 
             break
-        
-    return 1 if t and d else 0
-        
+    if t and d:
+        return 1 
+    else:
+        return 0
