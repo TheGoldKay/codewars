@@ -37,3 +37,4 @@ console.log(encode('white'));
 console.log();
 console.log(decode(encode('codewars')));
 console.log(decode(encode('white')));
+//to ignore
