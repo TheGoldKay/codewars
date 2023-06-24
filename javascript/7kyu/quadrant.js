@@ -5,3 +5,5 @@ function quadrant(x, y) {
         return y > 0? 2: 3;
     }
 }
+
+console.log(quadrant(1, 1));
