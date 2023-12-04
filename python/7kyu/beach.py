@@ -1,6 +1,16 @@
 import re
 
 def counter(arr, s):
+    """
+    Counts the number of times a substring appears in a given list.
+
+    Parameters:
+        arr (list): The list to search for the substring.
+        s (str): The substring to search for.
+
+    Returns:
+        int: The number of times the substring appears in the list.
+    """
     l = len(s)
     i = 0 
     ct = 0
