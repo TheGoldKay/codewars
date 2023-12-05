@@ -32,3 +32,11 @@ function partyPeople(party) {
       }
     }
   }
+
+function partyPeople(party) {
+    let filtered = party.filter(x => x <= party.length);
+    if(filtered.length === party.length){
+        return party.length;
+    }
+    return partyPeople(filtered);
+}
