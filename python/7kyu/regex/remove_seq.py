@@ -1,3 +1,5 @@
+import re 
+
 def remove_consecutive_duplicates(s : str) -> str:
     l = s.split(' ')
     if(len(l) > 1):
@@ -10,4 +12,6 @@ def remove_consecutive_duplicates(s : str) -> str:
         return " ".join(res)   
     else:
         return l[0]
-     
+
+def remove_consecutive_duplicates(s):
+    return re.sub(r"\b(\w+)(\s(\1\b))+", r"\1", s)
