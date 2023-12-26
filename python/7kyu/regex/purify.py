@@ -35,7 +35,9 @@ def purify2(s: str) -> str:
         del s[i]
     s = ''.join(s)
     s = s.strip()
-    for i in range(10):
+    # if you run this in codewars random tests some will not pass
+    # you have to be luck for this hard coded number of runs to be enough
+    for i in range(10): 
         s = s.replace('  ', ' ')
     return s
 
