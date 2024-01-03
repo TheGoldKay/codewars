@@ -9,5 +9,5 @@ def vowel_one(s):
             news += '0'
     return news
 
-def vowel_one(s):
+def vowel_one2(s):
     return "".join(map(lambda x: '1' if x in "aAeEiIoOuU" else '0', s))   

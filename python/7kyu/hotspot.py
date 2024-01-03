@@ -18,7 +18,7 @@ def nonstop_hotspot(area):
             right += 1
     return hs 
 
-def nonstop_hotspot(area):
+def nonstop_hotspot2(area):
     for part in area.split('#'):
         if 'P' in part:
             return part.count('*')
