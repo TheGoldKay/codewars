@@ -6,7 +6,7 @@ def add_binary(a,b):
         n = n // 2
     return ''.join(map(str, reversed(binList)))
 
-def add_binary(a, b):
+def add_binary2(a, b):
     return bin(a+b)[2:]
 
 print(add_binary(2, 2))
