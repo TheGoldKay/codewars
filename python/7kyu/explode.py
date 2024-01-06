@@ -1,5 +1,5 @@
 def explode(s):
-    res = []
+    res = ""
     for n in s:
-        res = res + [n] * int(n)
-    return "".join(res)
+        res += n * int(n)
+    return res
