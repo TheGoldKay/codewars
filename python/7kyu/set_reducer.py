@@ -1,23 +1,16 @@
 def set_reducer(arr):
+    # this is just a poor copy of itertools groupby
     ln = len(arr)
     if ln == 1:
         return arr[0]
     narr = []
     i = 0
     while i < ln:
-        if i + 1 < ln and arr[i] == arr[i + 1]:
-            count = 1
-            while i + 1 < ln and arr[i] == arr[i + 1]:
-                i += 1
-                count += 1
-            narr.append(count)
-        else:
-            if i == 0 or i == ln - 1:
-                narr.append(1)
-            elif arr[i - 1] != arr[i] and arr[i] != arr[i + 1]:
-                    narr.append(1)
-            else:
-                narr.append(arr[i])
+        count = 1
+        while i + 1 < ln and arr[i] == arr[i + 1]:
+            i += 1
+            count += 1
+        narr.append(count)
         i += 1
     return set_reducer(narr)
 
