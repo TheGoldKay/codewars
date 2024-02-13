@@ -1,5 +1,5 @@
 def cannons_ready(gunners)
-    gunners.each do |crew, answers|
+    gunners.each do |_, answers|
         if answers == "nay"
             return "Shiver me timbers!"
         end
