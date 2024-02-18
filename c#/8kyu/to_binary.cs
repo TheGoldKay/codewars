@@ -1,11 +1,11 @@
 using System;
 
-public static class Kata
+
+int to_binary(int n)
 {
-  public static int Main()
-  {
-    int n = 8;
-    Console.WriteLine(int.Parse(Convert.ToString(n, 2)));
-    return 0;
-  }
+  return int.Parse(Convert.ToString(n, 2));
 }
+
+Console.Write("Enter a numnber: ");
+int n = int.Parse(Console.ReadLine());
+Console.WriteLine(String.Format("{0} in binary is {1}", n, to_binary(n)));
