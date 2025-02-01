@@ -23,6 +23,17 @@ fn get_count_BETTER(string: &str) -> usize {
         .count()
 }
 
+#[test]
+fn test_get_count(){
+    assert_eq!(get_count("abracadabra"), 5);
+    assert_eq!(get_count("aeiou"), 5);
+    assert_eq!(get_count("AEIOU"), 5);
+    assert_eq!(get_count("a"), 1);
+    assert_eq!(get_count("b"), 0);
+    assert_eq!(get_count("aA"), 2);
+    assert_eq!(get_count("aAeEiIoOuU"), 10);
+}
+
 fn main(){
     let string: &str = "abracadabra";
     println!("{}", get_count(string));
