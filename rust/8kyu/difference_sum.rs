@@ -4,7 +4,7 @@ fn sum_of_differences(arr: &[i8]) -> Option<i8> {
     }
     let mut sorted = arr.to_vec();
     let mut sum: i8 = 0;
-    sorted.sort_by(|a, b| a.cmp(b));
+    sorted.sort();
     for i in 0..sorted.len()-1{
         sum += sorted[i + 1] - sorted[i];
     }
