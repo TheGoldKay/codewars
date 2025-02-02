@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Please provide a Rust file name"
+    echo "Usage: ./run.sh filename.rs"
+    exit 1
+fi
+
+FILE="src/solutions/$1"
+BINARY=$(basename "$1" .rs)
+
+if [ ! -f "$FILE" ]; then
+    echo "Error: File $FILE does not exist"
+    exit 1
+fi
+
+# Check if file contains tests
+if grep -q "#\[test\]" "$FILE"; then
+    echo "Tests found, compiling with --test flag"
+    rustc --test "$FILE"
+    RUST_TEST_COLOR=always "./$BINARY" --nocapture
+else
+    echo "No tests found, compiling normally"
+    rustc "$FILE"
+    "./$BINARY"
+fi
+
+# Clean up binary
+rm "$BINARY"
