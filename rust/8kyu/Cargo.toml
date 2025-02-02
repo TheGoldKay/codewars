@@ -1,0 +1,10 @@
+[package]
+name = "codewars"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "codewars"
+path = "src/lib.rs"
+
+[dependencies]

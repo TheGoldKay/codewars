@@ -1,0 +1,23 @@
+{
+    // Rust-specific settings
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.inlayHints.enable": true,
+    "rust-analyzer.hover.documentation": true,
+    "rust-analyzer.completion.autoimport.enable": true,
+    
+    // Remove problematic flags
+    // "rust-analyzer.server.extraEnv": {
+    //     "RUSTFLAGS": "-Zshare-generics=y"
+    // },
+    
+    // Add workspace settings
+    "rust-analyzer.cargo.features": "all",
+    "rust-analyzer.check.command": "check",
+    "rust-analyzer.procMacro.enable": true,
+    
+    // Editor settings for Rust
+    "[rust]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    }
+}
