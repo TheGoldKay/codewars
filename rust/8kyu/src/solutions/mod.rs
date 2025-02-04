@@ -5,3 +5,4 @@ pub mod flick_switch;
 pub mod get_count;
 pub mod init;
 pub mod reversed_strings;
+pub mod profession_drink;
