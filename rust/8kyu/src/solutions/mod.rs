@@ -6,3 +6,4 @@ pub mod get_count;
 pub mod init;
 pub mod reversed_strings;
 pub mod profession_drink;
+pub mod next_id;
