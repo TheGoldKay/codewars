@@ -7,3 +7,4 @@ pub mod init;
 pub mod reversed_strings;
 pub mod profession_drink;
 pub mod next_id;
+pub mod add_len;
