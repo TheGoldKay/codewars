@@ -8,21 +8,22 @@ using namespace std;
 
 string removeDuplicateWords(const string& str)
 {
-  stringstream ss(str);
+  istringstream ss(str);
   string word;
   vector<string> v;
-  string out;
+  ostringstream oss;
   while (ss >> word){
     if (find(v.begin(), v.end(), word) == v.end()){
       v.push_back(word);
     }
   }
-  for(auto i: v){
-    out += i;
-    out += " ";
+  if(!v.empty()){
+      oss << v[0];
+      for(int i = 1; i < v.size(); ++i){
+        oss << " " << v[i];
+      }
   }
-  out.pop_back();
-  return out;
+  return oss.str();
 }
 
 int main() { 
