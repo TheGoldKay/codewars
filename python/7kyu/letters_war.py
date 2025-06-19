@@ -14,7 +14,7 @@ right: dict[str, int] = {
     "z": 1, 
 }
 
-def alphabet_war(fight) -> str:
+def alphabet_war(fight: str) -> str:
     winner: list[str] = ["Left side wins!", "Right side wins!", "Let's fight again!"]
     p: tuple[int, int] = reduce(
         lambda acc, f: (
@@ -27,7 +27,7 @@ def alphabet_war(fight) -> str:
     return winner[2] if p[0] == p[1] else winner[p[1] > p[0]]
 
 
-def basic_test_cases():
+def basic_test_cases() -> None:
     assert(alphabet_war("z") == "Right side wins!")
     assert(alphabet_war("zdqmwpbs") == "Let's fight again!")
     assert(alphabet_war("wq") == "Left side wins!")
